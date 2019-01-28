@@ -42,7 +42,7 @@ bool Vazia(TFila& Fila){
 
 void Cria(TFila& Fila){
     Fila.Primeiro = 0;
-    Fila.Ultimo = Fila.Primeiro;
+    Fila.Ultimo = 0;
     Fila.Total = 0;
 }
 
@@ -66,12 +66,28 @@ void Dequeue(TFila& Fila){
 }
 
 void Imprime(TFila& Fila){
-    if(Vazia(Fila))
-        cout << "ERRO: Fila vazia." << endl;
-    else{
-        for( int con = Fila.Primeiro; con < Fila.Ultimo; con++){
-          printf ("Elemento[%d] = %d \n", con, Fila.Item[con]);
-       }
+    if (Vazia(Fila))
+        cout << "Erro : A Fila está vazia.\n" << endl;
+    else
+    {
+        int ax=0;
+        while(ax<Fila.Total)
+        {
+            ax++;
+            int p=Fila.Primeiro;
+            adc(p);
+        }
+        cout << endl;
     }
+    int i=0;
+    cout << "\nPRIMEIRO = " << Fila.Primeiro << endl;
+    cout << "ULTIMO = " << Fila.Ultimo << endl;
+    cout << "TOTAL = " << Fila.Total << endl;
+    while(i < Fila.Total)
+    {
+        i++;
+        cout << Fila.Item[Fila.Primeiro].Chave << " ";
+        adc(Fila.Primeiro);
+    }
+    cout << endl;
 }
-
